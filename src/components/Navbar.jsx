@@ -15,7 +15,7 @@ const Navbar = () => {
     const [opener, setopener] = useState(false);
     return (
         <>
-            <div className="flex w-full items-center justify-between sticky top-0 z-10 bg-pink-800 text-white">
+            <div className="flex w-full items-center justify-between sticky top-0 z-20 bg-pink-800 text-white">
 
                {opener&&
              
@@ -39,8 +39,8 @@ const Navbar = () => {
                         </Link>
                    
 
-                        <Link to={'/about-us'} className="flex gap-1 items-center">
-                            About Us
+                        <Link to={'/company-profile'} className="flex gap-1 items-center">
+                            About us
                         </Link>
 
                     </div>
@@ -75,9 +75,10 @@ const Navbar = () => {
                             Products <MdOutlineKeyboardArrowRight />
                         </Link>
 
-                        <Link className="flex gap-1 items-center">
-                            About Us
+                        <Link to={'/company-profile'} className="flex gap-1 items-center">
+                            About us
                         </Link>
+
 
                     </div>
 
@@ -107,7 +108,7 @@ const Navbar = () => {
             </div>
             {/* navbar bottom */}
             {menuproducts &&
-                <div className={`flex gap-3  p-8 border rounded-e-full  border-orange-500 bg-white ${menuproducts && 'animation-up  z-10 fixed'}`}>
+                <div className={`flex gap-3  p-8 border rounded-e-full  border-orange-500 bg-white ${menuproducts && 'animation-up  z-20 fixed'}`}>
 
                     <div className="flex gap-4 text-xs flex-wrap">
                         {/*  1*/}
