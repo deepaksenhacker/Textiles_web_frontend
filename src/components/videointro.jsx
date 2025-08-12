@@ -18,7 +18,7 @@ const Videointro = () => {
                         <div className="mb-10 p-2  flex gap-3 items-center  lg:w-1/2 mt-10 rounded-full">
                           
                         {/* counter */}
-                        <div className="p-3 lg:flex gap-3 justify-around w-full -mx-3 rounded-e-3xl lg:mt-4 bg-yellow-500">
+                        <div className="p-3 lg:hidden gap-3 justify-around w-full -mx-3 rounded-e-3xl lg:mt-4 bg-yellow-500">
                             <div className="p-5 border bg-white lg:rounded-e-3xl text-black -mt-6">
                                 <h5 className='text-[10px] lg:text-2xl'>Customer Reach</h5>
                                 <p className="text-[14px] lg:text-5xl">80,000 </p>
