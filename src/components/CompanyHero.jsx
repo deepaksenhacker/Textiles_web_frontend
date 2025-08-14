@@ -29,8 +29,8 @@ const CompanyHero = () => {
 
 
                         {/* 1 */}
-                        <div className="lg:w-1/2">
-                            <h5 className="lg:text-3xl text-orange-500 font-bold mb-3 mt-1">Best Saree Fabric - Khadi Fabric, Dyed Roto Fabric, Cambric Fabric, Cotton Fabric</h5>
+                        <div className="lg:w-1/2"> 
+                            <h5 className="lg:text-3xl text-xl text-orange-500 font-bold mb-3 mt-1">Best Saree Fabric - Khadi Fabric, Dyed Roto Fabric, Cambric Fabric, Cotton Fabric</h5>
                             <p className="text-sm p-2 text-slate-600">
                                 When looking for Khadi Fabric, Dyed Roto Fabric, Cambric Fabric, Cotton Fabric, etc., in any popular motif or design, make sure to browse the selection offered by NEW Textiles. A Pali, Rajasthan based manufacturer, exporter and supplier, we offer endless variety in quality fabrics, also presenting amazing styles in Readymade Blouses, Ladies Petticoats and Wedding Turbans. With decades of experience in the textile manufacturing business, we know what is a hit and what is a miss. At our factory in Rajasthan, India, we create no less than textile masterpieces, additionally offering quick order shipping, worldwide.
                             </p>
