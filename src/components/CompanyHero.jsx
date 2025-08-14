@@ -35,11 +35,7 @@ const CompanyHero = () => {
                                 When looking for Khadi Fabric, Dyed Roto Fabric, Cambric Fabric, Cotton Fabric, etc., in any popular motif or design, make sure to browse the selection offered by NEW Textiles. A Pali, Rajasthan based manufacturer, exporter and supplier, we offer endless variety in quality fabrics, also presenting amazing styles in Readymade Blouses, Ladies Petticoats and Wedding Turbans. With decades of experience in the textile manufacturing business, we know what is a hit and what is a miss. At our factory in Rajasthan, India, we create no less than textile masterpieces, additionally offering quick order shipping, worldwide.
                             </p>
                             <div className="w-fit flex gap-2 mt-4">
-                                <a href='' className='hover:opacity-60   text-white transition flex items-center gap-3 p-2 border rounded bg-green-500 '>
-                                    <MdWhatsapp className='text-2xl  animate-pulse' />
-                                    Send Inquiry
-                                </a>
-
+                               
                                 <a href='tel:7300457541' className='hover:opacity-60   text-white transition flex items-center gap-3 p-2 border rounded bg-orange-500 '>
                                     <FaPhone className='text-2xl  animate-pulse' />
                                     Call
@@ -82,7 +78,7 @@ const CompanyHero = () => {
                                 When looking for Khadi Fabric, Dyed Roto Fabric, Cambric Fabric, Cotton Fabric, etc., in any popular motif or design, make sure to browse the selection offered by NEW Textiles. A Pali, Rajasthan based manufacturer, exporter and supplier, we offer endless variety in quality fabrics, also presenting amazing styles in Readymade Blouses, Ladies Petticoats and Wedding Turbans. With decades of experience in the textile manufacturing business, we know what is a hit and what is a miss. At our factory in Rajasthan, India, we create no less than textile masterpieces, additionally offering quick order shipping, worldwide.
                             </p>
                             <div className="w-fit flex gap-2 mt-4">
-                                <a href='' className='hover:opacity-60   text-white transition flex items-center gap-3 p-2 border rounded bg-green-500 '>
+                                <a href='https://wa.me/917300457541' className='hover:opacity-60   text-white transition flex items-center gap-3 p-2 border rounded bg-green-500 '>
                                     <MdWhatsapp className='text-2xl  animate-pulse' />
                                     Send Inquiry
                                 </a>

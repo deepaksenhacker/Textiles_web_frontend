@@ -93,7 +93,7 @@ useEffect(() => {
 
                 {opener &&
 
-                    <div className={`w-full z-10 h-screen  top-0 animation-up bg-white absolute`}>
+                    <div className={`w-full z-10 h-screen   top-0 animation-up bg-white fixed`}>
 
                         <div className="p-2 flex flex-col  gap-5 ">
                             <Link className="flex w-full p-3 border-b-2  gap-1 items-center justify-between">

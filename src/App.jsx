@@ -31,7 +31,7 @@ const App = () => {
     <Navbar/>
           <Routes>
               <Route path='/' element={<Home/>}/>
-              <Route path='/product/:productid' element={<ProductPage/>}/>
+              <Route path='/product/:id' element={<ProductPage/>}/>
               <Route path='/company-profile' element={<CompanyProfile/>}/>
               <Route path='/cart' element={<Cart/>}/>
               <Route path='/inquiry' element={<Inquiry/>}/>
