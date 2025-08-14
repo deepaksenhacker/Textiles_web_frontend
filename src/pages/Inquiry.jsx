@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { MdContactMail } from 'react-icons/md';
 import { useLocation } from 'react-router-dom';
+import BreadCrumb from '../components/BreadCrumb';
 
 const Inquiry = () => {
    const loc = useLocation()
@@ -37,6 +38,7 @@ const sendEmail = (e) => {
   };
    return (
         <>
+        <BreadCrumb/>
             <div className="p-3 flex items-center gap-4">
                 <MdContactMail className='text-2xl text-pink-700' />
                 <h2 className='text-2xl'>Inquiry Products</h2>
