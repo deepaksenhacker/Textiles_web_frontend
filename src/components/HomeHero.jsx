@@ -4,6 +4,14 @@ import { MdLocationCity, MdLocationPin, MdMenu } from 'react-icons/md';
 import ContactForm from './ContactForm';
 
 const HomeHero = () => {
+ 
+  
+  
+  
+  
+  
+  
+  
     return (
         <div className='w-full lg:flex w-[870px]:flex-wrap justify-center gap-2 bg-neutral-100 p-2'>
             <div data-aos="flip-left"
@@ -46,51 +54,7 @@ const HomeHero = () => {
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000" className="bg-neutral-100 flex flex-col justify-between p-2 lg:w-1/2">
                 {/* sliders */}
-                <div className="flex justify-center mb-4 gap-2 p-2 bg-slate-100 rounded-full">
-                    {/* 1 */}
-                    <div className="border p-1 w-16 h-16 rounded-full border-black ">
-                        <img src="./male.jpg" alt="" className='w-full h-full rounded-full' />
-                        <div className="">
-                            <h5 className=' text-center mt-2'>Mens</h5>
-                        </div>
-                    </div>
-
-                    {/* 1 */}
-                    {/* 1 */}
-                    <div className="border p-1 w-16 h-16 rounded-full border-black ">
-                        <img src="./female.jpg" alt="" className='w-full h-full rounded-full' />
-                        <div className="">
-                            <h5 className=' text-center mt-2'>Female</h5>
-                        </div>
-                    </div>
-
-                    {/* 1 */}
-
-                    {/* 1 */}
-                    {/* 1 */}
-                    <div className="border p-1 w-16 h-16 rounded-full border-black ">
-                        <img src="./saree.jpg" alt="" className='w-full h-full rounded-full' />
-                        <div className="">
-                            <h5 className=' text-center mt-2'>Sarees</h5>
-                        </div>
-                    </div>
-
-                    {/* 1 */}
-
-                    {/* 1 */}
-
-
-                    {/* 1 */}
-                    <div className="border p-1 w-16 h-16 rounded-full border-black ">
-                        <img src="./matrial.jpg" alt="" className='w-full h-full rounded-full' />
-                        <div className="">
-                            <h5 className=' text-center mt-2'>Textiles</h5>
-                        </div>
-                    </div>
-
-                    {/* 1 */}
-
-                </div>
+                
 
                 <ContactForm />
                 {/* 2 */}

@@ -18,19 +18,13 @@
  @keyframes up {
   0%{
     opacity: 0%;
+    transform:translate(-500px ,0px);
         }
   100%{
     opacity: 100%;
+    
   }
  }
  .animation-down{
   animation: up 2s alternate-reverse;
 } 
-@keyframes up {
-0%{
-  opacity: 0%;
-      }
-100%{
-  opacity: 100%;
-}
-}

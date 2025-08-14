@@ -1,29 +1,31 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { MdPhone } from 'react-icons/md';
 
 const ContactForm = () => {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    whatsapp: '',
-    requestCall: false
-  });
+ 
+const formRef= useRef()
+ 
+const sendEmail = (e) => {
+  e.preventDefault();
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setForm(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-  };
+  const formData = new FormData(formRef.current);
+  formData.append('service_id', 'service_b7zmajg');
+  formData.append('template_id', 'template_x027718');
+  formData.append('user_id', 'RJRjFhZtmP-faMvO0');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form Data:', form);
-    alert('Thank you for contacting us!');
-    // You can integrate an API or send the data to your backend here
-  };
+  fetch("https://api.emailjs.com/api/v1.0/email/send-form", {
+    method: "POST",
+    body: formData,
+  })
+    .then(() => {
+      alert("Your mail is sent!");
+    })
+    .catch((error) => {
+      alert("Oops... " + JSON.stringify(error));
+    });
+};
+
 
   return (
     <div className=" p-2 flex flex-col items-center">
@@ -34,14 +36,13 @@ const ContactForm = () => {
       
 
         {/* Contact Form */}
-        <form onSubmit={handleSubmit} className="space-y-4 ">
+        <form ref={formRef} onSubmit={sendEmail} className="space-y-4 ">
           <div>
             <label className="block font-medium mb-1">Full Name *</label>
             <input
               type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
+              name="customername"
+             
               required
               className="w-full border-b-2 border-b-orange-500 p-2 rounded bg-transparent outline-none "
               placeholder="Enter your full name"
@@ -55,8 +56,7 @@ const ContactForm = () => {
             <input
               type="email"
               name="email"
-              value={form.email}
-              onChange={handleChange}
+             
               required
               className="w-full border-b-2 border-b-orange-500 p-2 rounded bg-transparent outline-none "
               placeholder="Enter your email"
@@ -68,24 +68,13 @@ const ContactForm = () => {
             <input
               type="tel"
               name="whatsapp"
-              value={form.whatsapp}
-              onChange={handleChange}
               required
               className="w-full border-b-2 border-b-orange-500 p-2 rounded bg-transparent outline-none "
               placeholder="Enter WhatsApp number"
             />
           </div>
 
-          <div className="flex items-center">
-            <input
-              type="checkbox"
-              name="requestCall"
-              checked={form.requestCall}
-              onChange={handleChange}
-              className="mr-2"
-            />
-            <label>Request a Callback</label>
-          </div>
+         
 
           <button type="submit" className="w-full bg-orange-600 text-white py-2 rounded hover:bg-blue-700 transition">
             Send Form 

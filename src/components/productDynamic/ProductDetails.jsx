@@ -48,7 +48,7 @@ const ProductDetails = () => {
     ];
 
     return (
-        <div className='p-2 w-full gap-2 mt-12 '>
+        <div className='p-2 w-full gap-2  '>
               <h5 className='text-2xl text-orange-600'>Rajasthani Safa Turban Cloth</h5>
                     <h5 className='text-xl text-slate-400  '>80 INR / Drozen</h5>
             <div className="flex gap-10 flex-wrap justify-center">
@@ -56,7 +56,7 @@ const ProductDetails = () => {
         
           </div>
                 <div className="p-4 border  justify-center">
-                    <img src="/turban1.jpg" alt="" className=" lg:w-[20rem]" />
+                    <img src="/turban1.jpg" alt="" className=" lg:w-[20rem] w-[10rem] m-auto"/>
                     <div className="flex lg:gap-3 gap-1 mt-4">
                     <img src="/turban1.jpg" alt="" className=" w-16 lg:w-[5rem] p-2 border-4" />
                     <img src="/turban1.jpg" alt="" className=" w-16 lg:w-[5rem] p-2 border-4" />

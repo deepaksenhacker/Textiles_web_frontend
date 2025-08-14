@@ -1,10 +1,23 @@
-import React, { use, useState } from 'react';
-import { MdFacebook, MdPhone, MdPhoneAndroid, MdVerified, MdWhatsapp, MdSupervisorAccount, MdArrowCircleRight, MdArrowBack, MdOutlineKeyboardArrowRight, MdClose, MdMenu } from 'react-icons/md'
+import React, { use, useContext, useEffect, useState } from 'react';
+import { MdFacebook, MdPhone, MdPhoneAndroid, MdVerified, MdWhatsapp, MdSupervisorAccount, MdArrowCircleRight, MdArrowBack, MdOutlineKeyboardArrowRight, MdClose, MdMenu, MdHouse, MdLabelOutline, MdCall, MdShoppingBag } from 'react-icons/md'
 import { FaInstagram, FaCottonBureau, FaPhone, FaCartPlus, FaArrowRight, FaCross } from 'react-icons/fa6'
 
 import { Link, useLocation } from 'react-router-dom';
 import { GiShoppingBag } from 'react-icons/gi';
+import { context } from '../MyContext/MyContext';
 const Navbar = () => {
+
+
+const {data,addCart,removeCart,products,cart,cartItems,removeFromCart,setCartItems} =useContext(context)
+
+
+
+
+
+
+
+
+
     const location = useLocation()
 
     // menu active
@@ -13,49 +26,137 @@ const Navbar = () => {
 
     // opener
     const [opener, setopener] = useState(false);
+   
+   
+
+
+// counter
+
+
+
+
+
+
+
+// cart
+useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("cart") || "[]");
+    
+    // This array should be the same product list from Products.jsx
+    const products = [
+      {
+        id: 1,
+        name: "Rajasthani Safa",
+        price: 120,
+        image: "/turban1.jpg"
+      },
+      {
+        id: 2,
+        name: "Ready Safa Rajasthani",
+        price: 80,
+        image: "/turban2.jpg"
+      },
+      {
+        id: 3,
+        name: "Orange Candles",
+        price: 150,
+        image: "/turban3.jpg"
+      },
+      {
+        id: 4,
+        name: "Orange T-shirt",
+        price: 499,
+        image: "/turban4.jpg"
+      },
+    ];
+
+    const cartData = products.filter((p) => savedCart.includes(p.id));
+    setCartItems(cartData);
+  }, []);
+
+
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
     return (
         <>
-            <div className="flex w-full items-center justify-between sticky top-0 z-20 bg-pink-800 text-white">
+            <div className="flex w-full items-center justify-between animation-up bg-pink-800 ">
 
-               {opener&&
-             
-                <div className="w-1/2 z-10 h-screen top-0 animation-up bg-white absolute">
-                    
-                <div className="p-2 flex flex-col  gap-5 ">
-                    <Link className="flex gap-1 items-center justify-end">
-                        <MdClose className='text-2xl text-black ' onClick={()=>setopener(false)}/>
+                {opener &&
 
-                    </Link>
+                    <div className={`w-full z-10 h-screen  top-0 animation-up bg-white absolute`}>
 
-                    <div className="">
-                    <img src="/images/logo.jpg" alt="" className="hover:opacity-35 transition m-auto w-24 border border-orange-500 bg-pink-100" />
-                </div>
-                    <a href="tel:7300457541" className=" gap-3 items-center lg:flex hidden text-black p-2 border">
-                        <MdWhatsapp className='text-2xl text-green-500' /> Chat With Us
-                    </a>    
-                    <div className="p-4 flex flex-col gap-5 items-center lg:text-xl text-xs text-black">
-                        <Link to={'/'} className="flex gap-1 items-center">
-                            Home
-                        </Link>
-                   
+                        <div className="p-2 flex flex-col  gap-5 ">
+                            <Link className="flex w-full p-3 border-b-2  gap-1 items-center justify-between">
+                                <p className="">Navkar Textiles Company</p>
+                                <MdClose className='text-2xl ' onClick={() => setopener(false)} />
 
-                        <Link to={'/company-profile'} className="flex gap-1 items-center">
-                            About us
-                        </Link>
+                            </Link>
+                            <a href="tel:7300457541" className="flex p-2  gap-1  items-center">
+                                <MdCall className=' text-xl text-green-500' />
+                                <p className="text-green-500"> +91-7300457541</p>
+                            </a>
+                            <div className="">
+                                <img src="/images/logo.jpg" alt="" className="hover:opacity-35 transition m-auto w-32 bg-pink-100" />
 
+                            </div>
+                            <a href="tel:7300457541" className=" gap-3 items-center lg:flex hidden text-black p-2 border">
+                                <MdWhatsapp className='text-2xl text-green-500' /> Chat With Us
+                            </a>
+                            <div className="p-4 flex flex-col gap-5 items-center justify-start lg:text-xl text-xs text-black">
+                                <Link to={'/'} className="w-full  text-xl flex gap-1 items-center" onClick={() => setopener(false)}>
+                                    <MdHouse className='text-pink-600' />
+                                    Home
+                                </Link>
+
+
+                                <Link to={'/company-profile'} className="w-full  text-xl flex gap-1 items-center" onClick={() => setopener(false)}>
+                                    <MdLabelOutline className='text-pink-600' />
+
+                                    About us
+                                </Link>
+                                <a href={'#products'} className="w-full  text-xl flex gap-1 items-center" onClick={() => setopener(false)}>
+                                    <MdArrowCircleRight className='text-pink-600' />
+
+                                    Products
+                                </a>
+                                <a href="tel:7300457541" className="w-full  text-xl flex gap-1 items-center">
+                                    <MdWhatsapp className='text-2xl text-green-500' /> Chat With Us
+                                </a>
+
+                            </div>
+                            {/* box */}
+                            <div className="p-2 flex justify-between border-t-2">
+                                <button onClick={()=>localStorage.clear()} className="w-full  text-xl flex gap-1 items-center">
+                                     Clear Cart
+                                </button>
+                                <Link to="/cart" className="w-full p-3 bg-pink-700  text-white text-xl flex gap-1 items-center">
+                                    <MdShoppingBag className='text-2xl '/>  Cart
+                                </Link>
+
+                            </div>
+
+                            {/* box */}
+                        </div>
                     </div>
 
-                </div>
-                </div>
-              
 
-               }
-               
+                }
+
                 {/* 1 */}
 
-              
-                <div className="p-2 flex items-center lg:gap-5 gap-2">
-                    <Link className=" gap-1 items-center lg:hidden block" onClick={()=>setopener(true)}>
+
+                <div className="p-2 flex items-center lg:gap-5 gap-2 text-white">
+                    <Link className=" gap-1 items-center lg:hidden block" onClick={() => setopener(true)}>
                         <MdMenu className='text-lg' />
 
                     </Link>
@@ -64,16 +165,16 @@ const Navbar = () => {
                         <FaPhone className='text-2xl' />
 
                     </a>
-                    <a href="tel:7300457541" className=" gap-3 items-center lg:flex hidden">
+                    <a href="https://wa.me/917300457541" target='_blank' className=" gap-3 items-center lg:flex hidden">
                         <MdWhatsapp className='text-2xl' /> Chat With Us
                     </a>
                     <div className="lg:p-4 p-3 flex lg:gap-5 gap-3 items-center lg:text-xl text-[10px] bg-pink-700">
                         <Link to={'/'} className="flex gap-1 items-center">
                             Home
                         </Link>
-                        <Link to={'/about-us'} className="flex gap-1 items-center hover:scale-95" onMouseOver={() => setmenuproducts(true)}>
+                        <a href={'#products'} className="flex gap-1 items-center hover:scale-95">
                             Products <MdOutlineKeyboardArrowRight />
-                        </Link>
+                        </a>
 
                         <Link to={'/company-profile'} className="flex gap-1 items-center">
                             About us
@@ -92,11 +193,12 @@ const Navbar = () => {
                 </div>
                 {/* LOGO */}
                 {/* 2 */}
-                <div className="p-2 flex gap-5">
-                    <a href="tel:7300457541" className="flex gap-1 items-center">
+                <div className="p-2 flex gap-5 text-white">
+                    <Link to={'/cart'} className="flex gap-1 items-center">
+                          <p className="lg:block hidden p-1 text-black bg-white rounded-full translate-x-4 translate-y-3 text-xs">{cartItems.length}</p>
                         <GiShoppingBag className=' text-3xl text-orange-500' />
-                        <p className="lg:block hidden">Cart</p>
-                    </a>
+                      
+                    </Link>
                     <a href="tel:7300457541" className="lg:flex hidden gap-1 items-center">
                         <MdWhatsapp />
                         <p className="lg:block hidden">Chat with us</p>
@@ -163,7 +265,6 @@ const Navbar = () => {
                 </div>
 
             }
-
 
 
         </>
