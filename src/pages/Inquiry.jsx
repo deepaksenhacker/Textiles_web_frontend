@@ -15,7 +15,7 @@ const formref =useRef()
 const sendEmail = (e) => {
     e.preventDefault();
 
-    const formData = new FormData(this);
+    const formData = new FormData(formref.current);
     formData.append('service_id', 'service_b7zmajg');
     formData.append('template_id', 'template_ogyrfc9');
     formData.append('user_id', 'RJRjFhZtmP-faMvO0');
