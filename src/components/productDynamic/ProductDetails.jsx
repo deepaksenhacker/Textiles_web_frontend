@@ -6,56 +6,11 @@ const ProductDetails = ({ productid }) => {
 
 
 
-const {InquirySend} = useContext(context)
+const {InquirySend,products} = useContext(context)
 
 const navigate =useNavigate()
 
-    const products = [
-        {
-            id: 1,
-            name: "Rajasthani Safa",
-            price: "₹120",
-            description: "Rajasthani Safa Turban Cloth",
-            image: "/turban1.jpg",
-            minorder: 10,
-            uses: "For Turban",
-            text: "Printed",
-            len: "Meter"
-        },
-        {
-            id: 2,
-            name: "Ready Safa Rajasthani",
-            price: "₹80",
-            description: "Safa And Turban cloths",
-            image: "/turban2.jpg",
-            minorder: 10,
-            uses: "For Turban",
-            text: "Printed",
-            len: "Meter"
-        },
-        {
-            id: 3,
-            name: "Orange Candles",
-            price: "₹150",
-            description: "Scented candles with a relaxing citrus aroma.",
-            image: "/turban3.jpg",
-            minorder: 10,
-            uses: "For Turban",
-            text: "Printed",
-            len: "Meter"
-        },
-        {
-            id: 4,
-            name: "Orange T-shirt",
-            price: "₹499",
-            description: "Bright, soft, and stylish cotton t-shirt.",
-            image: "/turban4.jpg",
-            minorder: 10,
-            uses: "For Turban",
-            text: "Printed",
-            len: "Meter"
-        },
-    ];
+    
 
     return (
         <>

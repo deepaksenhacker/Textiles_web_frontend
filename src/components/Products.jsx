@@ -12,52 +12,7 @@ function Products() {
     const savedCart = JSON.parse(localStorage.getItem("cart") || "[]");
     
     // This array should be the same product list from Products.jsx
-    const products = [
-      {
-          id: 1,
-          name: "Rajasthani Safa",
-          price: "₹120",
-          description: "Rajasthani Safa Turban Cloth",
-          image: "/turban1.jpg",
-          minorder: 10,
-          uses: "For Turban",
-          text: "Printed",
-          len: "Meter"
-      },
-      {
-          id: 2,
-          name: "Ready Safa Rajasthani",
-          price: "₹80",
-          description: "Safa And Turban cloths",
-          image: "/turban2.jpg",
-          minorder: 10,
-          uses: "For Turban",
-          text: "Printed",
-          len: "Meter"
-      },
-      {
-          id: 3,
-          name: "Orange Candles",
-          price: "₹150",
-          description: "Scented candles with a relaxing citrus aroma.",
-          image: "/turban3.jpg",
-          minorder: 10,
-          uses: "For Turban",
-          text: "Printed",
-          len: "Meter"
-      },
-      {
-          id: 4,
-          name: "Orange T-shirt",
-          price: "₹499",
-          description: "Bright, soft, and stylish cotton t-shirt.",
-          image: "/turban4.jpg",
-          minorder: 10,
-          uses: "For Turban",
-          text: "Printed",
-          len: "Meter"
-      },
-  ];
+    
 
     const cartData = products.filter((p) => savedCart.includes(p.id));
     setCartItems(cartData);
@@ -81,7 +36,7 @@ function Products() {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-[60%] m-auto object-fill rounded-xl mb-4"
+                className="w-[50%] lg:w-[10rem] m-auto object-fill rounded-xl mb-4"
               />
               <h2 className="text-sm font-semibold text-orange-700">
                 {product.name}

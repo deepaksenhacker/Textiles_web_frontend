@@ -14,7 +14,7 @@ export const MyContext = ({children})=>{
           name: "Rajasthani Safa",
           price: 120,
           description: "Rajasthani Safa Turban Cloth",
-          image: "./turban1.jpg",
+          image: "/turban1.jpg",
           minorder: 10,
           uses: "For Turban",
           text: "Printed",
@@ -25,7 +25,7 @@ export const MyContext = ({children})=>{
           name: "Ready Safa Rajasthani",
           price: 80,
           description: "Safa And Turban cloths",
-          image: "./turban2.jpg",
+          image: "/turban2.jpg",
           minorder: 10,
           uses: "For Turban",
           text: "Printed",
@@ -36,7 +36,7 @@ export const MyContext = ({children})=>{
           name: "Orange Candles",
           price: 150,
           description: "Scented candles with a relaxing citrus aroma.",
-          image: "./turban3.jpg",
+          image: "/turban3.jpg",
           minorder: 10,
           uses: "For Turban",
           text: "Printed",
@@ -47,7 +47,7 @@ export const MyContext = ({children})=>{
           name: "Orange T-shirt",
           price: 499,
           description: "Bright, soft, and stylish cotton t-shirt.",
-          image: "./turban4.jpg",
+          image: "/turban4.jpg",
           minorder: 10,
           uses: "For Turban",
           text: "Printed",
@@ -90,30 +90,50 @@ export const MyContext = ({children})=>{
         // This array should be the same product list from Products.jsx
         const products = [
           {
-            id: 1,
-            name: "Rajasthani Safa",
-            price: 120,
-            image: "/turban1.jpg"
+              id: 1,
+              name: "Rajasthani Safa",
+              price: "₹120",
+              description: "Rajasthani Safa Turban Cloth",
+              image: "/turban1.jpg",
+              minorder: 10,
+              uses: "For Turban",
+              text: "Printed",
+              len: "Meter"
           },
           {
-            id: 2,
-            name: "Ready Safa Rajasthani",
-            price: 80,
-            image: "/turban2.jpg"
+              id: 2,
+              name: "Ready Safa Rajasthani",
+              price: "₹80",
+              description: "Safa And Turban cloths",
+              image: "/turban2.jpg",
+              minorder: 10,
+              uses: "For Turban",
+              text: "Printed",
+              len: "Meter"
           },
           {
-            id: 3,
-            name: "Orange Candles",
-            price: 150,
-            image: "/turban3.jpg"
+              id: 3,
+              name: "Orange Candles",
+              price: "₹150",
+              description: "Scented candles with a relaxing citrus aroma.",
+              image: "/turban3.jpg",
+              minorder: 10,
+              uses: "For Turban",
+              text: "Printed",
+              len: "Meter"
           },
           {
-            id: 4,
-            name: "Orange T-shirt",
-            price: 499,
-            image: "/turban4.jpg"
+              id: 4,
+              name: "Orange T-shirt",
+              price: "₹499",
+              description: "Bright, soft, and stylish cotton t-shirt.",
+              image: "/turban4.jpg",
+              minorder: 10,
+              uses: "For Turban",
+              text: "Printed",
+              len: "Meter"
           },
-        ];
+      ];
     
         const cartData = products.filter((p) => savedCart.includes(p.id));
         setCartItems(cartData);
