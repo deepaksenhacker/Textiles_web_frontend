@@ -10,6 +10,9 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Cart from './pages/Cart';
 import { MyContext } from './MyContext/MyContext';
 import Inquiry from './pages/Inquiry';
+import Footer from './components/Footer';
+import InquiryPage from './pages/InquiryPage';
+import Call from './components/Call';
 // ..
 
 const App = () => {
@@ -35,12 +38,15 @@ const App = () => {
               <Route path='/company-profile' element={<CompanyProfile/>}/>
               <Route path='/cart' element={<Cart/>}/>
               <Route path='/inquiry' element={<Inquiry/>}/>
+              <Route path='/inquiry-page' element={<InquiryPage/>}/>
               
               {/* not found */}
               {/* <Route path='/*'/> */}
               
           </Routes>
     </MyContext>
+    <Footer/>
+    <Call/>
     </>
   );
 }
